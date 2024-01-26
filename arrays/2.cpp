@@ -28,7 +28,7 @@ int  removeDup(int arr[],int n)
 }
 int main()
 {
-    int arr[]={1,1,4,11,16,42,131};
+    int arr[]={1,1,4,11,16,16,42,131};
     int n=sizeof(arr)/4;
     for (int i = 0; i < n; i++)
     {

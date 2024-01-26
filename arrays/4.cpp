@@ -10,23 +10,25 @@ void display(int arr[],int n)
 }
 void zerosToEnd(int arr[],int n)
 {
-    int count=0;
     int k=0;
-    for (int i = 0; i < n; i++)
+    while(arr[k]!=0)
+    k++;
+    int i=k+1;
+    cout<<i;
+    while(i<n)
     {
+        
         if(arr[i]!=0)
         {
-            arr[k]=arr[i];
-            k++;
-        }
-        
-        else
-        count++;
-    }
-    for (int i = k; i < n; i++)
-    {
+        arr[k]=arr[i];
         arr[i]=0;
+        while(arr[k]!=0)
+        k++;
+        }
+        i=k+1;
+
     }
+    
     
     
 }
