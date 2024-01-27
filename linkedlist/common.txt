@@ -1,0 +1,7 @@
+int main()
+{
+    Node* head=nullptr;
+    head=insertAtEnd(9,head);
+    head=insertAtEnd(19,head);
+    display(head);
+}
