@@ -96,11 +96,14 @@ int height(Node* root)
 }
 bool isEqual(Node* p,Node * q)
 {
-    if(p==nullptr||q==nullptr){
-        return p==q;
+    if(p==nullptr&&q==nullptr){
+        return true;
     }
+    if(p!=nullptr&& q!=nullptr)
+    {
     return (p->data==q->data)&&isEqual(p->left,q->left)&&isEqual(p->right,q->right);
-
+    }
+    return 0;
 }
 void invertTree(Node* root)
 {

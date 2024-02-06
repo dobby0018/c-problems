@@ -13,33 +13,28 @@ void common(int arr1[],int n1,int arr2[],int n2,int arr3[],int n3)
     int i=0;
     int j=0;
     int k=0;
-    while(i<n1)
+    while(i<n1 && j<n2&&k<n3)
+
     {
-        while(j<n2)
+        if(arr1[i]==arr2[j]&&arr3[k]==arr2[j])
         {
-            cout<<i<<" "<<j<<" "<<arr1[i]<<" "<<arr2[j]<<endl;
-            if(arr1[i]<arr2[j])
-            {i++;}
-            else if(arr1[i]>arr2[j])
-            {j++;}
-            else
-            {
-                while(k<n3)
-                {
-                    
-                    if(arr3[k]<arr1[i])
-                    {k++;}
-                    else if(arr3[k]>arr1[i])
-                    break;
-                    else
-                    {count++;break;}
-                }
-                
-            }
+            cout<<arr1[i]<<" ";
+            i++;j++;k++;
+        } 
+        else if(arr1[i]<arr2[j])
+        {
+            i++;
+        } 
+        else if(arr2[j]<arr3[k]) 
+        {
+            j++;
+        } 
+        else{
+            k++;
         }
         
     }
-    cout<<"common: "<<count;
+    
     
 }
 int main()
